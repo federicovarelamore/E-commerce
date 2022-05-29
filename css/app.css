@@ -1,0 +1,53 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h1 span {
+  color: #0d6efd;
+}
+
+.navbar-brand {
+  color: #0d6efd !important;
+  font-family: "Raleway", sans-serif;
+}
+ul li a {
+  display: inline-block;
+}
+
+ul li a:hover {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+  ul li a::after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: #000;
+
+    transition: 400ms;
+  }
+  ul li a:hover::after {
+    width: 100%;
+  }
+}
