@@ -6,6 +6,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1.6rem;
   line-height: 2rem;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -16,10 +17,19 @@ h3 {
 
 h1 {
   font-size: 3.8rem;
+  letter-spacing: 0.5rem;
 }
 
 h1 span {
   color: #0d6efd;
+}
+
+h2 {
+  letter-spacing: 0.3rem;
+}
+
+h3 {
+  letter-spacing: 0.2rem;
 }
 
 .navbar-brand {
@@ -32,6 +42,32 @@ ul li a {
 
 ul li a:hover {
   font-weight: bold;
+}
+
+.hero {
+  background-image: url(/E-commerce/img/principal.jpg);
+  height: 25rem;
+  min-width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product-bg {
+  background-color: #0d6efd;
+}
+
+.bg-green {
+  background-color: #8cbc00;
+}
+
+.categorias img {
+  transition: all 0.3s ease-in-out;
+}
+
+.categorias img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -49,5 +85,15 @@ ul li a:hover {
   }
   ul li a:hover::after {
     width: 100%;
+  }
+
+  .hero {
+    height: 55rem;
+  }
+
+  .producto img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
   }
 }
