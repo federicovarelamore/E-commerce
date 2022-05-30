@@ -44,6 +44,10 @@ ul li a:hover {
   font-weight: bold;
 }
 
+.toast {
+  z-index: 999 !important;
+  box-shadow: 0px 0px 55px -10px rgba(0, 0, 0, 1) !important;
+}
 .hero {
   background-image: url(/E-commerce/img/principal.jpg);
   height: 25rem;
