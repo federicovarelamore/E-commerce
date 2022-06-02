@@ -32,117 +32,6 @@ h3 {
   letter-spacing: 0.2rem;
 }
 
-.svg-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: rgb(0, 63, 219);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 63, 219, 1) 0%,
-    rgba(76, 138, 230, 1) 100%
-  );
-  transition: background 0.8s 0.5s;
-}
-
-.svg-container.active {
-  background: #fff;
-}
-.svg {
-  width: 70%;
-}
-
-.letra1,
-.letra2,
-.letra3,
-.letra4,
-.letra5,
-.letra6,
-.letra7,
-.letra8,
-.letra9,
-.letra10,
-.letra11,
-.letra12,
-.letra13 {
-  fill: transparent;
-  stroke: #fff;
-  stroke-width: 2px;
-}
-
-.letra1 {
-  stroke-dasharray: 180px;
-  stroke-dashoffset: -180px;
-  animation: effect-letter 0.4s linear forwards;
-}
-.letra2 {
-  stroke-dasharray: 190px;
-  stroke-dashoffset: -190px;
-  animation: effect-letter 0.4s 0.5s linear forwards;
-}
-.letra3 {
-  stroke-dasharray: 220px;
-  stroke-dashoffset: -220px;
-  animation: effect-letter 0.4s 1s linear forwards;
-}
-.letra4 {
-  stroke-dasharray: 210px;
-  stroke-dashoffset: -210px;
-  animation: effect-letter 0.4s 1.5s linear forwards;
-}
-.letra5 {
-  stroke-dasharray: 200px;
-  stroke-dashoffset: -200px;
-  animation: effect-letter 0.4s 2s linear forwards;
-}
-.letra6 {
-  stroke-dasharray: 200px;
-  stroke-dashoffset: -200px;
-  animation: effect-letter 0.4s 2.5s linear forwards;
-}
-.letra7 {
-  stroke-dasharray: 240px;
-  stroke-dashoffset: -240px;
-  animation: effect-letter 0.4s 3s linear forwards;
-}
-.letra8 {
-  stroke-dasharray: 250px;
-  stroke-dashoffset: -250px;
-  animation: effect-letter 0.4s 3.5s linear forwards;
-}
-.letra9 {
-  stroke-dasharray: 250px;
-  stroke-dashoffset: -250px;
-  animation: effect-letter 0.4s 4s linear forwards;
-}
-.letra10 {
-  stroke-dasharray: 230px;
-  stroke-dashoffset: -230px;
-  animation: effect-letter 0.4s 4.5s linear forwards;
-}
-.letra11 {
-  stroke-dasharray: 230px;
-  stroke-dashoffset: -230px;
-  animation: effect-letter 0.4s 5s linear forwards;
-}
-.letra12 {
-  stroke-dasharray: 220px;
-  stroke-dashoffset: -220px;
-  animation: effect-letter 0.4s 5.5s linear forwards;
-}
-.letra13 {
-  stroke-dasharray: 230px;
-  stroke-dashoffset: -230px;
-  animation: effect-letter 0.4s 6s linear forwards;
-}
-
-@keyframes effect-letter {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 .navbar-brand {
   color: #0d6efd !important;
   font-family: "Raleway", sans-serif;
@@ -193,11 +82,15 @@ aside ul li {
   list-style-type: none;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 5rem;
   }
-  ul li a::after {
+  div#navbar ul li a::after {
     content: "";
     width: 0px;
     height: 1.5px;
@@ -206,7 +99,7 @@ aside ul li {
 
     transition: 400ms;
   }
-  ul li a:hover::after {
+  div#navbar ul li a:hover::after {
     width: 100%;
   }
 
