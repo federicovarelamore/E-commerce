@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TiendaMuebles | NOSOTROS </title>
+    <title>TiendaMuebles | CONTACTO</title>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,14 +16,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/E-commerce/css/bootstrap.min.css">
     <link rel="stylesheet" href="/E-commerce/css/app.css">
+    <link rel="stylesheet" href="/E-commerce/css/styles.css">
 </head>
 
 <body>
+
+
+
+
     <header class="text-center py-5">
         <a href="/E-commerce/index.html" class="text-decoration-none text-reset">
             <h1>Tienda <span class="text-primary">Muebles</span></h1>
         </a>
     </header>
+
+
 
 
     <div class="container-xl">
@@ -76,26 +83,83 @@
     <!-- PRODUCTS -->
 
     <main class="container-xl my-5">
-        <h2 class="fw-bold display-3 text-center my-5">Sobre Nosotros</h2>
+        <h2 class="fw-bold display-3 text-center my-5">Contacto</h2>
+        <div class="row justify-content-center">
 
-        <div class="row g-5 align-items-center">
-            <div class="col-md-6">
-                <img class="img-fluid" src="/E-commerce/img/nosotros.jpg" alt="Sobre nosotros">
-            </div>
-            <div class="col-md-6">
-                <p class="text-center mt-5 mt-md-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
-                    cum
-                    autem, asperiores minus similique quisquam quia officia vel veniam architecto, molestiae omnis
-                    officiis laborum dolores itaque facere ipsam repellendus ad.</p>
-                <p class="text-center mt-5 mt-md-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quia
-                    reiciendis hic voluptatibus cum vitae sed, dolore in quidem dicta autem quod possimus atque qui nemo
-                    deserunt beatae ratione eius.</p>
-            </div>
+            <form class="col-8">
+                <fieldset>
+                    <legend class="bg-primary text-center p-2 text-white fs-2 rounded-2">Tus Datos</legend>
+                </fieldset>
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label mt-4">Nombre:</label>
+                    <input type="text" placeholder="Ingresá tu nombre" id="nombre" class="form-control p-3 fs-4">
+                </div>
+
+                <div class="mb-3">
+                    <label for="asunto" class="form-label">Asunto:</label>
+                    <input type="text" id="asunto" placeholder="Ingresá tu asunto" class="form-control p-3 fs-4">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" id="email" placeholder="Ingresá tu correo" class="form-control p-3 fs-4">
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono:</label>
+                    <input type="tel" id="telefono" placeholder="Ingresá tu número" class="form-control p-3 fs-4">
+                </div>
+
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea id="mensaje" rows="10" class="form-control"></textarea>
+                </div>
+
+                <fieldset>
+                    <legend class="bg-primary text-center text-white fs-2 p-3 my-4 rounded-2">País</legend>
+
+                    <div class="mb-4">
+                        <label for="pais" class="form-label fs-2">País:</label>
+                        <select class="form-control" id="pais">
+                            <option value="" disabled class="fs-2">--Seleccione--</option>
+                            <option value="AR" class="fs-2">Argentina</option>
+                            <option value="BOL" class="fs-2">Bolivia</option>
+                            <option value="COL" class="fs-2">Colombia</option>
+                            <option value="CL" class="fs-2">Chile</option>
+                            <option value="PE" class="fs-2">Perú</option>
+                            <option value="UY" class="fs-2">Uruguay</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="bg-primary text-center text-white fs-2 p-3 my-4 rounded-2">Información Extra</legend>
+
+                    <div class="mb-3 form-check  p-3">
+                        <label for="cliente" class="form-label mx-2">Cliente</label>
+                        <input name="tipo" type="radio" id="cliente" class="form-check-input p-3 fs-4">
+                    </div>
+                    <div class="mb-3 form-check  p-3">
+                        <label for="proveedor" class="form-label mx-2">Proveedor</label>
+                        <input name="tipo" type="radio" id="proveedor" class="form-check-input p-3 fs-4">
+                    </div>
+
+                    <div class="my-4 d-grid d-md-flex">
+                        <input type="submit" class="btn btn-secondary text-center text-white py-2 px-5 fs-2 mt-5 "
+                            value="Enviar Formulario">
+
+
+                    </div>
+
+            </form>
+
+
         </div>
 
     </main>
 
-    <footer class="pt-5 mt-5 border-top">
+    <footer class=" pt-5 mt-5 border-top">
 
         <div class="container-xl">
             <div class="row">
@@ -163,7 +227,8 @@
 
                 </div>
             </div>
-            <p class="text-center mt-5 fs-2">Copyright 2022. Todos los derechos reservados | TiendaMuebles.</p>
+            <p class="text-center mt-5 fs-2">Copyright 2022. Todos los derechos reservados |
+                TiendaMuebles.</p>
         </div>
     </footer>
 
@@ -172,12 +237,7 @@
 
 
     <script>
-        window.onload = (e) => {
-            let myAlert = document.querySelector('.toast');
-            let bsAlert = new bootstrap.Toast(myAlert);
 
-            bsAlert.show();
-        }
     </script>
     <script src="/E-commerce/js/bootstrap.bundle.min.js"></script>
 </body>
