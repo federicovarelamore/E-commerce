@@ -84,45 +84,57 @@
 
     <main class="container-xl my-5">
         <h2 class="fw-bold display-3 text-center my-5">Contacto</h2>
+        <p class="text-center font-monospace">Lo invitamos a dejarnos sus datos y nos contactaremos con usted a la
+            brevedad.</p>
+        <p class="text-center font-monospace text-decoration-underline">Todos los campos son obligatorios.</p>
         <div class="row justify-content-center">
 
-            <form class="col-8">
+            <form class="col-8 needs-validation" novalidate>
                 <fieldset>
                     <legend class="bg-primary text-center p-2 text-white fs-2 rounded-2">Tus Datos</legend>
                 </fieldset>
 
                 <div class="mb-3">
-                    <label for="nombre" class="form-label mt-4">Nombre:</label>
-                    <input type="text" placeholder="Ingresá tu nombre" id="nombre" class="form-control p-3 fs-4">
+                    <label for="nombre" class="form-label mt-4 fw-bold">Nombre:</label>
+                    <input type="text" placeholder="Ingresá tu nombre" id="nombre" class="form-control p-3 fs-4"
+                        required>
+                    <span class="invalid-feedback">«Este campo es obligatorio»</span>
                 </div>
 
                 <div class="mb-3">
-                    <label for="asunto" class="form-label">Asunto:</label>
-                    <input type="text" id="asunto" placeholder="Ingresá tu asunto" class="form-control p-3 fs-4">
+                    <label for="asunto" class="form-label fw-bold">Asunto:</label>
+                    <input type="text" id="asunto" placeholder="Ingresá tu asunto" class="form-control p-3 fs-4"
+                        required>
+                    <span class="invalid-feedback">«Este campo es obligatorio»</span>
                 </div>
 
                 <div class="mb-3">
-                    <label for="email" class="form-label">E-mail:</label>
-                    <input type="email" id="email" placeholder="Ingresá tu correo" class="form-control p-3 fs-4">
+                    <label for="email" class="form-label fw-bold">E-mail:</label>
+                    <input type="email" id="email" placeholder="Ingresá tu correo" class="form-control p-3 fs-4"
+                        required>
+                    <span class="invalid-feedback">«Este campo es obligatorio»</span>
                 </div>
 
                 <div class="mb-3">
-                    <label for="telefono" class="form-label">Teléfono:</label>
-                    <input type="tel" id="telefono" placeholder="Ingresá tu número" class="form-control p-3 fs-4">
+                    <label for="telefono" class="form-label fw-bold">Teléfono:</label>
+                    <input type="tel" id="telefono" placeholder="Ingresá tu número" class="form-control p-3 fs-4"
+                        required>
+                    <span class="invalid-feedback">«Este campo es obligatorio»</span>
                 </div>
 
                 <div class="mb-3">
-                    <label for="mensaje" class="form-label">Mensaje:</label>
-                    <textarea id="mensaje" rows="10" class="form-control"></textarea>
+                    <label for="mensaje" class="form-label fw-bold">Mensaje:</label>
+                    <textarea id="mensaje" rows="10" class="form-control" required></textarea>
+                    <span class="invalid-feedback">«Este campo es obligatorio»</span>
                 </div>
 
                 <fieldset>
                     <legend class="bg-primary text-center text-white fs-2 p-3 my-4 rounded-2">País</legend>
 
                     <div class="mb-4">
-                        <label for="pais" class="form-label fs-2">País:</label>
-                        <select class="form-control" id="pais">
-                            <option value="" disabled class="fs-2">--Seleccione--</option>
+                        <label for="pais" class="form-label fs-3 fw-bold">País:</label>
+                        <select class="form-control" id="pais" required>
+                            <option value="" class="fs-2">--Seleccione--</option>
                             <option value="AR" class="fs-2">Argentina</option>
                             <option value="BOL" class="fs-2">Bolivia</option>
                             <option value="COL" class="fs-2">Colombia</option>
@@ -130,6 +142,7 @@
                             <option value="PE" class="fs-2">Perú</option>
                             <option value="UY" class="fs-2">Uruguay</option>
                         </select>
+                        <span class="invalid-feedback">«Este campo es obligatorio»</span>
                     </div>
                 </fieldset>
 
@@ -138,11 +151,12 @@
 
                     <div class="mb-3 form-check  p-3">
                         <label for="cliente" class="form-label mx-2">Cliente</label>
-                        <input name="tipo" type="radio" id="cliente" class="form-check-input p-3 fs-4">
+                        <input name="tipo" type="radio" id="cliente" class="form-check-input p-3 fs-4" required>
                     </div>
                     <div class="mb-3 form-check  p-3">
                         <label for="proveedor" class="form-label mx-2">Proveedor</label>
-                        <input name="tipo" type="radio" id="proveedor" class="form-check-input p-3 fs-4">
+                        <input name="tipo" type="radio" id="proveedor" class="form-check-input p-3 fs-4" required>
+                        <span class="invalid-feedback">«Este campo es obligatorio»</span>
                     </div>
 
                     <div class="my-4 d-grid d-md-flex">
@@ -240,6 +254,7 @@
 
     </script>
     <script src="/E-commerce/js/bootstrap.bundle.min.js"></script>
+    <script src="/E-commerce/js/app.js"></script>
 </body>
 
 </html>
